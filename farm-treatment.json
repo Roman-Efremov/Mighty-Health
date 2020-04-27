@@ -1,0 +1,25 @@
+{
+  "farm-treatment": {
+    "medicament": [
+      {
+        "_med_name": "paracetamol",
+        "_amount": "1 tablet",
+        "_hour": "12.00",
+        "_status": "taken"
+      },
+      {
+        "_med_name": "antistress3000",
+        "_amount": "2 tablet",
+        "_hour": "18.00",
+        "_status": "not taken"
+      },
+      {
+        "_med_name": "aspirin",
+        "_amount": "1 tablet",
+        "_hour": "9.45",
+        "_status": "taken"
+      }
+    ],
+    "_title": "post heart attack treatment"
+  }
+}
