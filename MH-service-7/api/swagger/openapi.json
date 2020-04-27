@@ -1,0 +1,106 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.1",
+    "title": "MH rehabilitation"
+  },
+  "host": "localhost:10011",
+  "basePath": "/api/v1",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/rehabilitation/pharmacological": {
+      "x-swagger-router-controller": "pharmacological",
+      "get": {
+        "description": "List of medicaments",
+        "operationId": "listPharmacological",
+        "parameters": [
+          {
+            "name": "medId",
+            "in": "query",
+            "description": "Medicaments to filter out",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Time of reception",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page to iterate, 1 is default",
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MedList"
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/swagger": {
+      "x-swagger-pipe": "swagger_raw"
+    }
+  },
+  "definitions": {
+    "MedList": {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "medId": {
+          "type": "string"
+        },
+        "medType": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "status": {
+          "description": "taken | not taken",
+          "type": "string"
+        }
+      }
+    },
+    "ErrorResponse": {
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
