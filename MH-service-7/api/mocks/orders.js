@@ -25,7 +25,7 @@ var util = require('util');
   we specify that in the exports of this module that 'hello' maps to the function named 'hello'
  */
 module.exports = {
-  listOrders: getMeds,
+  listPharmacological: getMeds
 };
 
 /*
@@ -36,7 +36,7 @@ module.exports = {
  */
 function getMeds(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var teaOrder = { 
+  var MedList = { 
                   "id": "1234", "medId": "45810", "medType": "parathetamol"
                   "time": "13:30", "status": "not taken"
                   }

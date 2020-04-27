@@ -28,8 +28,8 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
 
   console.log('check this to see docs :\n  http://127.0.0.1:' + port + '/');
   
-  if (swaggerExpress.runner.swagger.paths['/tea/orders']) {
-  	console.log('try this to test:\ncurl http://127.0.0.1:' + port + '/api/v1/tea/orders');
+  if (swaggerExpress.runner.swagger.paths['rehabilitation/pharmacological']) {
+  	console.log('try this to test:\ncurl http://127.0.0.1:' + port + '/api/v1/rehabilitation/pharmacological');
 
   }
 });
