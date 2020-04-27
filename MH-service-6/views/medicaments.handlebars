@@ -1,0 +1,19 @@
+  <p>
+  <table border>
+    <tr>
+        <td>medicament name </td>
+        <td>amount </td>
+        <td>time </td>
+        <td>status </td>
+    </tr>
+	{{#each med}}
+	<tr>
+		<td>{{name}}</td>
+		<td>{{amount}} tablet</td>
+		<td>{{hours}}:{{minutes}}</td>
+		<td>{{#if status}} taken {{else}} not taken {{/if}}</td>
+    </tr>
+	{{/each}}
+	</table>
+  </p>
+

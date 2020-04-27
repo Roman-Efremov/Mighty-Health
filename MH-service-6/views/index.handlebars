@@ -1,0 +1,9 @@
+	<div>
+		<h1>Profile</h1>
+		{{#with profile}}
+		<h3>Name: {{name}}</h3>
+		<h4>Status of your health: {{#if healthStatus}} good {{else}} bad {{/if}}</h4>
+		{{/with}}
+		<p><a href="/pharmacologicaltreatment">/pharmacologicaltreatment</a></p>
+	</div>
+
