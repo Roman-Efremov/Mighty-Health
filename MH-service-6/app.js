@@ -24,8 +24,7 @@ const hbs = exphbs.create({
 
 HandlebarsIntl.registerWith(hbs.handlebars)
 
-
-
+///////app.use(morganLogger("combined", { "stream": logger.stream }));
 
 // view engine setup
 //exphbs
@@ -33,10 +32,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 
 app.engine('handlebars', hbs.engine);
-
-
-
-
 
 // app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));

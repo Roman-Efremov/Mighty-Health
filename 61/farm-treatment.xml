@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<farm-treatment title="post heart attack treatment">
+        <medicament med_name="paracetamol" amount="1 tablet" hour="12.00" status="taken"/>
+        <medicament med_name="antistress3000" amount="2 tablet" hour="18.00" status="not taken"/>
+        <medicament med_name="aspirin" amount="1 tablet" hour="9.45" status="taken"/>
+</farm-treatment>
